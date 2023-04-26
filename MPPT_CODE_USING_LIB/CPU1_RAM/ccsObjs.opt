@@ -1,0 +1,11 @@
+"./MPPT_USING_LIB.obj"
+"./syscfg/board.obj"
+"./syscfg/c2000ware_libraries.obj"
+"./device/F2837xD_CodeStartBranch.obj"
+"./device/device.obj"
+"./device/initInterrupts.obj"
+"./device/initPeripherials.obj"
+"./device/mppt.obj"
+"../2837xD_RAM_lnk_cpu1.cmd"
+"C:/ti/C2000Ware_4_03_00_00/driverlib/f2837xd/driverlib/ccs/Debug/driverlib.lib"
+-llibc.a

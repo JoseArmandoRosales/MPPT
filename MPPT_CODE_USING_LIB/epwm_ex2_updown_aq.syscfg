@@ -1,0 +1,56 @@
+/**
+ * These arguments were used when this file was generated. They will be automatically applied on subsequent loads
+ * via the GUI or CLI. Run CLI with '--help' for additional information on how to override these arguments.
+ * @cliArgs --device "F2837xD" --package "F2837xD_176PTP" --part "F2837xD_176PTP" --context "CPU1" --product "C2000WARE@4.03.00.00"
+ * @versions {"tool":"1.15.0+2826"}
+ */
+
+/**
+ * Import the modules used in this configuration.
+ */
+const epwm  = scripting.addModule("/driverlib/epwm.js", {}, false);
+const epwm1 = epwm.addInstance();
+const epwm2 = epwm.addInstance();
+const epwm3 = epwm.addInstance();
+const epwm4 = epwm.addInstance();
+const epwm5 = epwm.addInstance();
+const epwm6 = epwm.addInstance();
+
+/**
+ * Write custom configuration values to the imported modules.
+ */
+epwm1.$name                  = "myEPWM1";
+epwm1.epwm.$assign           = "EPWM1";
+epwm1.epwm.epwm_aPin.$assign = "ball.160";
+epwm1.epwm.epwm_bPin.$assign = "ball.161";
+
+epwm2.$name                  = "myEPWM2";
+epwm2.epwm.$assign           = "EPWM2";
+epwm2.epwm.epwm_aPin.$assign = "ball.162";
+epwm2.epwm.epwm_bPin.$assign = "ball.163";
+
+epwm3.$name                  = "myEPWM3";
+epwm3.epwm.$assign           = "EPWM3";
+epwm3.epwm.epwm_aPin.$assign = "ball.164";
+epwm3.epwm.epwm_bPin.$assign = "ball.165";
+
+epwm4.$name = "myEPWM4";
+
+epwm5.$name        = "myEPWM5";
+epwm5.epwm.$assign = "EPWM5";
+
+epwm6.$name        = "myEPWM6";
+epwm6.epwm.$assign = "EPWM6";
+
+/**
+ * Pinmux solution for unlocked pins/peripherals. This ensures that minor changes to the automatic solver in a future
+ * version of the tool will not impact the pinmux you originally saw.  These lines can be completely deleted in order to
+ * re-solve from scratch.
+ */
+epwm4.epwm.$suggestSolution           = "EPWM4";
+epwm4.epwm.epwm_aPin.$suggestSolution = "ball.166";
+epwm4.epwm.epwm_bPin.$suggestSolution = "ball.167";
+epwm5.epwm.epwm_aPin.$suggestSolution = "ball.18";
+epwm5.epwm.epwm_bPin.$suggestSolution = "ball.19";
+epwm6.epwm.epwm_aPin.$suggestSolution = "ball.1";
+epwm6.epwm.epwm_bPin.$suggestSolution = "ball.2";
